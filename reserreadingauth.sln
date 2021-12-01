@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reserreadingauth", "reserreadingauth\reserreadingauth.csproj", "{BDFD2BAD-AB46-49DD-9321-B67DF7464EF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reserreadingauth.Common", "reserreadingauth.Common\reserreadingauth.Common.csproj", "{27BFFECC-83FD-4A14-9414-0ADE4305908C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reserreadingauth.logic", "reserreadingauth.logic\reserreadingauth.logic.csproj", "{08C97F99-08E4-4B51-948A-37EF67140D0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reserreadingauth.Data", "reserreadingauth.Data\reserreadingauth.Data.csproj", "{136AC394-1245-40FA-9797-9202B26F67F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDFD2BAD-AB46-49DD-9321-B67DF7464EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDFD2BAD-AB46-49DD-9321-B67DF7464EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDFD2BAD-AB46-49DD-9321-B67DF7464EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDFD2BAD-AB46-49DD-9321-B67DF7464EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27BFFECC-83FD-4A14-9414-0ADE4305908C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27BFFECC-83FD-4A14-9414-0ADE4305908C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27BFFECC-83FD-4A14-9414-0ADE4305908C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27BFFECC-83FD-4A14-9414-0ADE4305908C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08C97F99-08E4-4B51-948A-37EF67140D0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08C97F99-08E4-4B51-948A-37EF67140D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08C97F99-08E4-4B51-948A-37EF67140D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08C97F99-08E4-4B51-948A-37EF67140D0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{136AC394-1245-40FA-9797-9202B26F67F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{136AC394-1245-40FA-9797-9202B26F67F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{136AC394-1245-40FA-9797-9202B26F67F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{136AC394-1245-40FA-9797-9202B26F67F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
