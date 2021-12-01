@@ -1,0 +1,12 @@
+C:\individueel_project-s3\reserreadingauth\reserreadingauth.Common\bin\Debug\net5.0\reserreadingauth.Common.deps.json
+C:\individueel_project-s3\reserreadingauth\reserreadingauth.Common\bin\Debug\net5.0\reserreadingauth.Common.dll
+C:\individueel_project-s3\reserreadingauth\reserreadingauth.Common\bin\Debug\net5.0\ref\reserreadingauth.Common.dll
+C:\individueel_project-s3\reserreadingauth\reserreadingauth.Common\bin\Debug\net5.0\reserreadingauth.Common.pdb
+C:\individueel_project-s3\reserreadingauth\reserreadingauth.Common\obj\Debug\net5.0\reserreadingauth.Common.csproj.AssemblyReference.cache
+C:\individueel_project-s3\reserreadingauth\reserreadingauth.Common\obj\Debug\net5.0\reserreadingauth.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\individueel_project-s3\reserreadingauth\reserreadingauth.Common\obj\Debug\net5.0\reserreadingauth.Common.AssemblyInfoInputs.cache
+C:\individueel_project-s3\reserreadingauth\reserreadingauth.Common\obj\Debug\net5.0\reserreadingauth.Common.AssemblyInfo.cs
+C:\individueel_project-s3\reserreadingauth\reserreadingauth.Common\obj\Debug\net5.0\reserreadingauth.Common.csproj.CoreCompileInputs.cache
+C:\individueel_project-s3\reserreadingauth\reserreadingauth.Common\obj\Debug\net5.0\reserreadingauth.Common.dll
+C:\individueel_project-s3\reserreadingauth\reserreadingauth.Common\obj\Debug\net5.0\ref\reserreadingauth.Common.dll
+C:\individueel_project-s3\reserreadingauth\reserreadingauth.Common\obj\Debug\net5.0\reserreadingauth.Common.pdb
