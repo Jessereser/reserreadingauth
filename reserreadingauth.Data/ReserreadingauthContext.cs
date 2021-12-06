@@ -6,11 +6,9 @@ namespace reserreadingauth.Data
 {
     public class ReserreadingauthContext : DbContext
     {
+        public DbSet<Account> Accounts { get; set; }
         public ReserreadingauthContext(DbContextOptions<ReserreadingauthContext> options) : base(options)
         {
         }
-
-        public DbSet<Account> Accounts { get; set; }
-        
     }
 }

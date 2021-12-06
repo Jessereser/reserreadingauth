@@ -22,14 +22,15 @@ namespace reserreadingauth
         {
             Configuration = configuration;
         }
-
+        private readonly string reserreadingdb = "Server=localhost;Database=reserreadingdb;Uid=root;Pwd=Floortje02;";
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ReserreadingauthContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseMySql(reserreadingdb, ServerVersion.AutoDetect(reserreadingdb)));
+            
 
             services.AddDatabaseDeveloperPageExceptionFilter();
             
@@ -50,13 +51,24 @@ namespace reserreadingauth
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "reserreadingauth v1"));
             }
 
+            using (IServiceScope scope = app.ApplicationServices.CreateScope())
+            using (var context = scope.ServiceProvider.GetService<ReserreadingauthContext>())
+                context.Database.EnsureCreated();
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=account}/{action=index}/{id?}"
+                );
+            });
         }
     }
 }
