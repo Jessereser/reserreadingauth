@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
+using Newtonsoft.Json;
 using reserreadingauth.Data;
 using reserreadingauth.common;
 using reserreadingauth.logic;
@@ -119,14 +120,11 @@ namespace reserreadingauth.Controllers
             return NoContent();
         }
 
-        [HttpPut]
-        public async Task<IActionResult> Initializer()
+        [HttpPost("googleAuth")]
+        public async Task<ActionResult<Account>> Initializer(string token)
         {
-            var account = new Account
-                {Id = "testID", Username = "testUsername", Email = "testEmail", Password = "testPassword"};
-            await _context.Accounts.AddAsync(account);
-            await _context.SaveChangesAsync();
-            return NoContent();
+            Account account = await _aLogic.GoogleAuth(token);
+            return account;
         }
         
         private bool AccountExists(string id)

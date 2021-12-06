@@ -14,6 +14,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\reserreadingauth.Common\reserreadingauth.Common.csproj" />
+      <ProjectReference Include="..\ReserreadingAuth.Contract\ReserreadingAuth.Contract.csproj" />
     </ItemGroup>
 
 </Project>

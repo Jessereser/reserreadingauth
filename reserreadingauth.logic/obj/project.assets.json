@@ -1525,6 +1525,22 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "ReserreadingAuth.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "reserreadingauth.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ReserreadingAuth.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ReserreadingAuth.Contract.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "reserreadingauth.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1534,6 +1550,7 @@
           "Microsoft.EntityFrameworkCore": "5.0.12",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12",
           "Pomelo.EntityFrameworkCore.MySql": "5.0.3",
+          "ReserreadingAuth.Contract": "1.0.0",
           "reserreadingauth.Common": "1.0.0"
         },
         "compile": {
@@ -5747,6 +5764,11 @@
       "path": "../reserreadingauth.Common/reserreadingauth.Common.csproj",
       "msbuildProject": "../reserreadingauth.Common/reserreadingauth.Common.csproj"
     },
+    "ReserreadingAuth.Contract/1.0.0": {
+      "type": "project",
+      "path": "../ReserreadingAuth.Contract/ReserreadingAuth.Contract.csproj",
+      "msbuildProject": "../ReserreadingAuth.Contract/ReserreadingAuth.Contract.csproj"
+    },
     "reserreadingauth.Data/1.0.0": {
       "type": "project",
       "path": "../reserreadingauth.Data/reserreadingauth.Data.csproj",
@@ -5760,6 +5782,7 @@
       "Microsoft.EntityFrameworkCore >= 5.0.12",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.12",
       "Pomelo.EntityFrameworkCore.MySql >= 5.0.3",
+      "ReserreadingAuth.Contract >= 1.0.0",
       "System.Security.Cryptography.Pkcs >= 6.0.0",
       "reserreadingauth.Common >= 1.0.0",
       "reserreadingauth.Data >= 1.0.0"
@@ -5794,6 +5817,9 @@
           "projectReferences": {
             "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Common\\reserreadingauth.Common.csproj": {
               "projectPath": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Common\\reserreadingauth.Common.csproj"
+            },
+            "C:\\individueel_project-s3\\reserreadingauth\\ReserreadingAuth.Contract\\ReserreadingAuth.Contract.csproj": {
+              "projectPath": "C:\\individueel_project-s3\\reserreadingauth\\ReserreadingAuth.Contract\\ReserreadingAuth.Contract.csproj"
             },
             "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Data\\reserreadingauth.Data.csproj": {
               "projectPath": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Data\\reserreadingauth.Data.csproj"

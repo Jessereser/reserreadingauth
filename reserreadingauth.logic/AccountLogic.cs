@@ -2,15 +2,17 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using reserreadingauth.common;
+using ReserreadingAuth.Contract;
 using reserreadingauth.Data;
 
 namespace reserreadingauth.logic
 {
     public class AccountLogic
     {
-        private AccountData _aDal; 
-        public AccountLogic(AccountData aData)
+        private IAccountData _aDal; 
+        public AccountLogic(IAccountData aData)
         {
             _aDal = aData;
         }
@@ -41,19 +43,18 @@ namespace reserreadingauth.logic
         
         public async Task<Account> GoogleAuth(string token)
         {
-            Account googleAccount = new Account();
-            Account checkGoogleAccount = new Account();
-            googleAccount = await _aDal.GetGoogleAuthDataAsync(token);
-            checkGoogleAccount = _aDal.GoogleAuthSelectAData(googleAccount.Username, googleAccount.Email);
+            Account googleAccount = await _aDal.GetGoogleAuthDataAsync(token);
+            Account checkGoogleAccount = await _aDal.GoogleAuthSelectAData(googleAccount.Username, googleAccount.Email);
             if (checkGoogleAccount.Id != null)
             {
-                googleAccount = _aDal.GoogleAuthSelectAData(googleAccount.Username, googleAccount.Email);
+                googleAccount = await _aDal.GoogleAuthSelectAData(googleAccount.Username, googleAccount.Email);
                 return googleAccount;
             }
             else
             {
-                _aDal.GoogleAuthInsertAccount(googleAccount.Username, googleAccount.Email);
-                googleAccount = _aDal.GoogleAuthSelectAData(googleAccount.Username, googleAccount.Email);
+                googleAccount.Id = Guid.NewGuid().ToString();
+                await _aDal.GoogleAuthInsertAccount(googleAccount);
+                googleAccount = await _aDal.GoogleAuthSelectAData(googleAccount.Username, googleAccount.Email);
                 return googleAccount;
             }
         }

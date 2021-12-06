@@ -1,0 +1,15 @@
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\bin\Debug\net5.0\ReserreadingAuth.Contract.deps.json
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\bin\Debug\net5.0\ReserreadingAuth.Contract.dll
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\bin\Debug\net5.0\ref\ReserreadingAuth.Contract.dll
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\bin\Debug\net5.0\ReserreadingAuth.Contract.pdb
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\bin\Debug\net5.0\reserreadingauth.Common.dll
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\bin\Debug\net5.0\reserreadingauth.Common.pdb
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\obj\Debug\net5.0\ReserreadingAuth.Contract.csproj.AssemblyReference.cache
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\obj\Debug\net5.0\ReserreadingAuth.Contract.GeneratedMSBuildEditorConfig.editorconfig
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\obj\Debug\net5.0\ReserreadingAuth.Contract.AssemblyInfoInputs.cache
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\obj\Debug\net5.0\ReserreadingAuth.Contract.AssemblyInfo.cs
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\obj\Debug\net5.0\ReserreadingAuth.Contract.csproj.CoreCompileInputs.cache
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\obj\Debug\net5.0\ReserreadingAuth.Contract.csproj.CopyComplete
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\obj\Debug\net5.0\ReserreadingAuth.Contract.dll
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\obj\Debug\net5.0\ref\ReserreadingAuth.Contract.dll
+C:\individueel_project-s3\reserreadingauth\ReserreadingAuth.Contract\obj\Debug\net5.0\ReserreadingAuth.Contract.pdb
