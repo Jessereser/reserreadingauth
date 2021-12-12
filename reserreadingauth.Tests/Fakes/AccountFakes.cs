@@ -29,9 +29,16 @@ namespace reserreadingauth.Tests.Fakes
             throw new System.NotImplementedException();
         }
 
-        public Task<Account> SelectAccount(string accountId)
+        public async Task<Account> SelectAccount(string accountId)
         {
-            throw new System.NotImplementedException();
+            Account account = new Account()
+            {
+                Id = "3F2504E0-4F89-11D3-9A0C-0305E82C3301",
+                Username = "TestUser",
+                Email = "TestEmail@gmail.com",
+                Password = "TestPassword"
+            };
+            return account;
         }
     }
 }

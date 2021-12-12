@@ -11,7 +11,11 @@ namespace reserreadingauth.logic
 {
     public class AccountLogic
     {
-        private IAccountData _aDal; 
+        private IAccountData _aDal;
+
+        public AccountLogic()
+        {
+        }
         public AccountLogic(IAccountData aData)
         {
             _aDal = aData;
