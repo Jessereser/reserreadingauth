@@ -21,7 +21,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\reserreadingauth.Data\reserreadingauth.Data.csproj" />
-      <ProjectReference Include="..\reserreadingauth.logic\reserreadingauth.logic.csproj" />
+      <ProjectReference Include="..\reserreadingauth.Logic\reserreadingauth.Logic.csproj" />
     </ItemGroup>
 
 </Project>

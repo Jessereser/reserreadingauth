@@ -2430,7 +2430,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "reserreadingauth.logic/1.0.0": {
+      "reserreadingauth.Logic/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
@@ -2445,10 +2445,10 @@
           "reserreadingauth.Data": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/reserreadingauth.logic.dll": {}
+          "bin/placeholder/reserreadingauth.Logic.dll": {}
         },
         "runtime": {
-          "bin/placeholder/reserreadingauth.logic.dll": {}
+          "bin/placeholder/reserreadingauth.Logic.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -8104,10 +8104,10 @@
       "path": "../reserreadingauth.Data/reserreadingauth.Data.csproj",
       "msbuildProject": "../reserreadingauth.Data/reserreadingauth.Data.csproj"
     },
-    "reserreadingauth.logic/1.0.0": {
+    "reserreadingauth.Logic/1.0.0": {
       "type": "project",
-      "path": "../reserreadingauth.logic/reserreadingauth.logic.csproj",
-      "msbuildProject": "../reserreadingauth.logic/reserreadingauth.logic.csproj"
+      "path": "../reserreadingauth.Logic/reserreadingauth.Logic.csproj",
+      "msbuildProject": "../reserreadingauth.Logic/reserreadingauth.Logic.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8121,7 +8121,7 @@
       "Pomelo.EntityFrameworkCore.MySql >= 5.0.3",
       "Swashbuckle.AspNetCore >= 5.6.3",
       "reserreadingauth.Data >= 1.0.0",
-      "reserreadingauth.logic >= 1.0.0"
+      "reserreadingauth.Logic >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8154,8 +8154,8 @@
             "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Data\\reserreadingauth.Data.csproj": {
               "projectPath": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Data\\reserreadingauth.Data.csproj"
             },
-            "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.logic\\reserreadingauth.logic.csproj": {
-              "projectPath": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.logic\\reserreadingauth.logic.csproj"
+            "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Logic\\reserreadingauth.Logic.csproj": {
+              "projectPath": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Logic\\reserreadingauth.Logic.csproj"
             }
           }
         }

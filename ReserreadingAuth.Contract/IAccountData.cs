@@ -6,7 +6,9 @@ namespace ReserreadingAuth.Contract
     public interface IAccountData
     {
         Task<Account> GetGoogleAuthDataAsync(string token);
-        Task<bool> GoogleAuthInsertAccount(Account account);
+        Task<Account> GoogleAuthInsertAccount(Account account);
         Task<Account> GoogleAuthSelectAData(string username, string email);
+        Task<Account> InsertAccount(Account account);
+        Task<Account> SelectAccount(string accountId);
     }
 }

@@ -30,19 +30,27 @@ namespace reserreadingauth.Data
             nepAccount.Email = null;
             return nepAccount;
         }
-        
-        public async Task<bool> GoogleAuthInsertAccount(Account account)
+        public async Task<Account> GoogleAuthInsertAccount(Account account)
         {
             await _context.Accounts.AddAsync(account); 
             await _context.SaveChangesAsync();
-            return true;
+            return account;
         }
-
         public async Task<Account> GoogleAuthSelectAData(string username, string email)
         {
             Account googleAccount = await _context.Accounts.FirstOrDefaultAsync(x => x.Username == username && x.Email == email);
             return googleAccount;
         }
-        
+        public async Task<Account> InsertAccount(Account account)
+        {
+            await _context.Accounts.AddAsync(account);
+            await _context.SaveChangesAsync();
+            return account;
+        }
+        public async Task<Account> SelectAccount(string accountId)
+        {
+            Account account = await _context.Accounts.FirstOrDefaultAsync(x => x.Id == accountId);
+            return account;
+        }
     }
 }

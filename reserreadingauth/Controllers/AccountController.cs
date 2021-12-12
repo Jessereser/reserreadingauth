@@ -26,86 +26,37 @@ namespace reserreadingauth.Controllers
             _aLogic = new AccountLogic(new AccountData(context));
         }
         
-
-        // GET: api/API
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Account>>> GetAccounts()
+        [HttpPost("googleAuth")]
+        public async Task<ActionResult<Account>> GoogleAuthenticate(string token)
         {
-            return await _context.Accounts.ToListAsync();
-        }
-
-        // GET: api/API/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Account>> GetAccount(string id)
-        {
-            var account = await _context.Accounts.FindAsync(id);
-
-            if (account == null)
-            {
-                return NotFound();
-            }
-
+            Account account = await _aLogic.GoogleAuth(token);
             return account;
         }
-
-        // PUT: api/API/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutAccount(string id, Account account)
+        
+        [HttpPost]
+        public async Task<ActionResult<Account>> Register(Account account, string confPassword)
         {
-            if (id != account.Id)
+            Account checkAccount = await _aLogic.Register(account, confPassword);
+            if (checkAccount.Id == null)
             {
                 return BadRequest();
             }
-
-            _context.Entry(account).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!AccountExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            return checkAccount;
         }
-
-        // POST: api/API
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Account>> PostAccount(Account account)
+        
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Account>> GetAccount(string id)
         {
-            _context.Accounts.Add(account);
-            try
+            Account account =  await _aLogic.GetUser(id);
+            if (account.Id != id)
             {
-                await _context.SaveChangesAsync();
+                return NotFound();
             }
-            catch (DbUpdateException)
-            {
-                if (AccountExists(account.Id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtAction("GetAccount", new { id = account.Id }, account);
+            return account;
         }
-
-        // DELETE: api/API/5
-        [HttpDelete("{id}")]
+        
+        
+        /*[HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAccount(string id)
         {
             var account = await _context.Accounts.FindAsync(id);
@@ -118,15 +69,8 @@ namespace reserreadingauth.Controllers
             await _context.SaveChangesAsync().ConfigureAwait(false);
 
             return NoContent();
-        }
+        }*/
 
-        [HttpPost("googleAuth")]
-        public async Task<ActionResult<Account>> Initializer(string token)
-        {
-            Account account = await _aLogic.GoogleAuth(token);
-            return account;
-        }
-        
         private bool AccountExists(string id)
         {
             return _context.Accounts.Any(e => e.Id == id);

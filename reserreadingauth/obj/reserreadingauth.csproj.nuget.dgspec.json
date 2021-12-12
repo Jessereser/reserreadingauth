@@ -226,14 +226,14 @@
         }
       }
     },
-    "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.logic\\reserreadingauth.logic.csproj": {
+    "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Logic\\reserreadingauth.Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.logic\\reserreadingauth.logic.csproj",
-        "projectName": "reserreadingauth.logic",
-        "projectPath": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.logic\\reserreadingauth.logic.csproj",
+        "projectUniqueName": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Logic\\reserreadingauth.Logic.csproj",
+        "projectName": "reserreadingauth.Logic",
+        "projectPath": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Logic\\reserreadingauth.Logic.csproj",
         "packagesPath": "C:\\Users\\jesse\\.nuget\\packages\\",
-        "outputPath": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.logic\\obj\\",
+        "outputPath": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Logic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -346,8 +346,8 @@
               "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Data\\reserreadingauth.Data.csproj": {
                 "projectPath": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Data\\reserreadingauth.Data.csproj"
               },
-              "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.logic\\reserreadingauth.logic.csproj": {
-                "projectPath": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.logic\\reserreadingauth.logic.csproj"
+              "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Logic\\reserreadingauth.Logic.csproj": {
+                "projectPath": "C:\\individueel_project-s3\\reserreadingauth\\reserreadingauth.Logic\\reserreadingauth.Logic.csproj"
               }
             }
           }
