@@ -17,19 +17,19 @@ namespace reserreadingauth.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly ReserreadingauthContext _context;
         private readonly AccountLogic _aLogic;
 
         public AccountController(ReserreadingauthContext context)
         {
-            _context = context;
             _aLogic = new AccountLogic(new AccountData(context));
         }
         
         [HttpPost("googleAuth")]
         public async Task<ActionResult<Account>> GoogleAuthenticate(string token)
         {
+            Console.WriteLine("entered");
             Account account = await _aLogic.GoogleAuth(token);
+            
             return account;
         }
         
@@ -42,6 +42,16 @@ namespace reserreadingauth.Controllers
                 return BadRequest();
             }
             return checkAccount;
+        }
+
+        public async Task<ActionResult<Account>> Login(string email, string password)
+        {
+            Account account = await _aLogic.Login(new Account()
+            {
+                Email = email,
+                Password = password,
+            });
+            return account;
         }
         
         [HttpGet("{id}")]
@@ -70,10 +80,6 @@ namespace reserreadingauth.Controllers
 
             return NoContent();
         }*/
-
-        private bool AccountExists(string id)
-        {
-            return _context.Accounts.Any(e => e.Id == id);
-        }
+        
     }
 }

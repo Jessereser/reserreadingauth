@@ -47,6 +47,19 @@ namespace reserreadingauth.Data
             await _context.SaveChangesAsync();
             return account;
         }
+        public async Task<Account> Login(Account account)
+        {
+            try
+            {
+                account = await _context.Accounts.FirstOrDefaultAsync(x =>
+                    x.Email == account.Email && x.Password == account.Password);
+                return account;
+            }
+            catch
+            {
+                return account;
+            }
+        }
         public async Task<Account> SelectAccount(string accountId)
         {
             Account account = await _context.Accounts.FirstOrDefaultAsync(x => x.Id == accountId);

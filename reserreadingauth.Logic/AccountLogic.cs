@@ -59,7 +59,14 @@ namespace reserreadingauth.logic
                 return new Account();
             }
         }
-        
+
+        public async Task<Account> Login(Account account)
+        {
+            account.Password = Encrypt(account.Password);
+            account =  await _aDal.Login(account);
+            return account;
+        }
+
         public async Task<Account> GetUser(string accountId)
         {
             return await _aDal.SelectAccount(accountId);

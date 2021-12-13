@@ -10,5 +10,6 @@ namespace ReserreadingAuth.Contract
         Task<Account> GoogleAuthSelectAData(string username, string email);
         Task<Account> InsertAccount(Account account);
         Task<Account> SelectAccount(string accountId);
+        Task<Account> Login(Account account);
     }
 }

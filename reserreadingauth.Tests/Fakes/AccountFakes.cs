@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using reserreadingauth.common;
 using ReserreadingAuth.Contract;
 
@@ -39,6 +40,11 @@ namespace reserreadingauth.Tests.Fakes
                 Password = "TestPassword"
             };
             return account;
+        }
+
+        public async Task<Account> Login(Account account)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
