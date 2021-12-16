@@ -75,16 +75,23 @@ namespace reserreadingauth.logic
         public async Task<Account> GoogleAuth(string token)
         {
             Account googleAccount = await _aDal.GetGoogleAuthDataAsync(token);
-            Account checkGoogleAccount = await _aDal.GoogleAuthSelectAData(googleAccount.Username, googleAccount.Email);
-            if (checkGoogleAccount.Id != null)
+            if (googleAccount.Username != null)
             {
-                return checkGoogleAccount;
+                Account checkGoogleAccount = await _aDal.GoogleAuthSelectAData(googleAccount.Username, googleAccount.Email);
+                if (checkGoogleAccount.Id != null)
+                {
+                    return checkGoogleAccount;
+                }
+                else
+                {
+                    googleAccount.Id = Guid.NewGuid().ToString();
+                    Account account = await _aDal.GoogleAuthInsertAccount(googleAccount);
+                    return account;
+                }
             }
             else
             {
-                googleAccount.Id = Guid.NewGuid().ToString();
-                Account account = await _aDal.GoogleAuthInsertAccount(googleAccount);
-                return account;
+                return new Account();
             }
         }
     }

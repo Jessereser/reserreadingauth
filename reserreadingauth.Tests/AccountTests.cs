@@ -49,6 +49,7 @@ namespace reserreadingauth.Tests
         [Test]
         public async void TakeUser_WithNonExistingId_True()
         {
+            //Arrange test
             Account account = new Account()
             {
                 Id = "2318008",
@@ -65,6 +66,82 @@ namespace reserreadingauth.Tests
             //Assert test
 
             Assert.AreNotEqual(account.Id, accountEqual.Id);
+        }
+
+        [Test]
+        public async void Login_withCorrectCredentials_True()
+        {
+            //Arrange test
+            Account account = new Account()
+            {
+                Email = "TestEmail@gmail.com",
+                Password = "TestPassword"
+            };
+            AccountLogic _aLogic = new AccountLogic(new AccountFakes());
+
+            //Act test
+
+            account = await _aLogic.Login(account);
+            
+            //Assert test
+            Assert.AreNotEqual(account.Id, null);
+        }
+        
+        [Test]
+        public async void Login_withWrongPassword_True()
+        {
+            //Arrange test
+            Account account = new Account()
+            {
+                Email = "TestEmail@gmail.com",
+                Password = "null"
+            };
+            AccountLogic _aLogic = new AccountLogic(new AccountFakes());
+
+            //Act test
+
+            account = await _aLogic.Login(account);
+            
+            //Assert test
+            Assert.AreEqual(account.Id, null);
+        }
+        
+        [Test]
+        public async void Login_withWrongEmail_True()
+        {
+            //Arrange test
+            Account account = new Account()
+            {
+                Email = "null",
+                Password = "TestPassword"
+            };
+            AccountLogic _aLogic = new AccountLogic(new AccountFakes());
+
+            //Act test
+
+            account = await _aLogic.Login(account);
+            
+            //Assert test
+            Assert.AreEqual(account.Id, null);
+        }
+        
+        [Test]
+        public async void Login_withWrongCredentials_True()
+        {
+            //Arrange test
+            Account account = new Account()
+            {
+                Email = "null",
+                Password = "null"
+            };
+            AccountLogic _aLogic = new AccountLogic(new AccountFakes());
+
+            //Act test
+
+            account = await _aLogic.Login(account);
+            
+            //Assert test
+            Assert.AreEqual(account.Id, null);
         }
     }
 }
