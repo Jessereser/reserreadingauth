@@ -1,3 +1,5 @@
+using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NUnit.Framework;
 using reserreadingauth.common;
@@ -12,20 +14,37 @@ namespace reserreadingauth.Tests
     { 
         
         [Test]
-        public void Encrypt_PasswordTest123Encrypts_True()
+        public void Encrypt_PasswordTestPasswordEncryptAreNotEqual_True()
         {
             //Arrange test
-            string password = "Test123";
+            string password = "TestPassword";
             AccountLogic _aLogic = new AccountLogic();
             
             //Act test
             string result = _aLogic.Encrypt(password);
+            Console.WriteLine(result);
             
             //Assert test
-            Assert.AreNotEqual("Test123", result);
+            Assert.AreNotEqual("TestPassword", result);
         }
+        
         [Test]
-        public async void TakeUser_WithExistingId_True()
+        public void Encrypt_PasswordTestPasswordEncryptAreEqual_True()
+        {
+            //Arrange test
+            string password = "TestPassword";
+            AccountLogic _aLogic = new AccountLogic();
+            
+            //Act test
+            string result = _aLogic.Encrypt(password);
+            Console.WriteLine(result);
+            
+            //Assert test
+            Assert.AreEqual("7bcf9d89298f1bfae16fa02ed6b61908fd2fa8de45dd8e2153a3c47300765328", result);
+        }
+        
+        [Test]
+        public async Task TakeUser_WithExistingId_True()
         {
             //Arrange test
             Account account = new Account()
@@ -47,7 +66,7 @@ namespace reserreadingauth.Tests
         }
 
         [Test]
-        public async void TakeUser_WithNonExistingId_True()
+        public async Task TakeUser_WithNonExistingId_True()
         {
             //Arrange test
             Account account = new Account()
@@ -69,7 +88,7 @@ namespace reserreadingauth.Tests
         }
 
         [Test]
-        public async void Login_withCorrectCredentials_True()
+        public async Task Login_withCorrectCredentials_True()
         {
             //Arrange test
             Account account = new Account()
@@ -88,7 +107,7 @@ namespace reserreadingauth.Tests
         }
         
         [Test]
-        public async void Login_withWrongPassword_True()
+        public async Task Login_withWrongPassword_True()
         {
             //Arrange test
             Account account = new Account()
@@ -107,7 +126,7 @@ namespace reserreadingauth.Tests
         }
         
         [Test]
-        public async void Login_withWrongEmail_True()
+        public async Task Login_withWrongEmail_True()
         {
             //Arrange test
             Account account = new Account()
@@ -126,7 +145,7 @@ namespace reserreadingauth.Tests
         }
         
         [Test]
-        public async void Login_withWrongCredentials_True()
+        public async Task Login_withWrongCredentials_True()
         {
             //Arrange test
             Account account = new Account()

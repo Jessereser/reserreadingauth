@@ -1,4 +1,9 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5a00d121_002D17f4_002D4db4_002Da6b0_002Deb42c998d983/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TakeUser_WithExistingId_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::1672C501-1265-455E-96D1-BECC866D815E::net5.0::reserreadingauth.Tests.AccountTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=66a287be_002D3c4d_002D4d7f_002D8035_002D5f5cf0f10b91/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Encrypt_PasswordTest123Encrypts_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::8D7AB161-1CE4-4965-976E-3EF9A8CBF9AA::net5.0::reserreadingauth.Tests.AccountTests.Encrypt_PasswordTest123Encrypts_True&lt;/TestId&gt;&#xD;

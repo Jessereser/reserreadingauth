@@ -50,7 +50,7 @@ namespace reserreadingauth.Tests.Fakes
                 Id = "3F2504E0-4F89-11D3-9A0C-0305E82C3301",
                 Username = "TestUser",
                 Email = "TestEmail@gmail.com",
-                Password = "TestPassword"
+                Password = "7bcf9d89298f1bfae16fa02ed6b61908fd2fa8de45dd8e2153a3c47300765328"
             };
             if(DBAccount.Email == account.Email && DBAccount.Password == account.Password)
             {
@@ -58,7 +58,7 @@ namespace reserreadingauth.Tests.Fakes
             }
             else
             {
-                return account;
+                return new Account();
             }
         }
     }
