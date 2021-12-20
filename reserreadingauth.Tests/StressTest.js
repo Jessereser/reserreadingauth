@@ -9,15 +9,15 @@ export let options = {
     insecureSkipTLSVerify: true,
     noConnectionReuse: false,
     stages: [
-        {duration: '20s', target: 100},
-        {duration: '40s', target: 100},
-        {duration: '20s', target: 200},
-        {duration: '40s', target: 200},
-        {duration: '20s', target: 300},
-        {duration: '40s', target: 300},
-        {duration: '20s', target: 400},
-        {duration: '40s', target: 400},
-        {duration: '5m', target: 0},
+        {duration: '5s', target: 100},
+        {duration: '10s', target: 100},
+        {duration: '5s', target: 200},
+        {duration: '10s', target: 200},
+        {duration: '5s', target: 300},
+        {duration: '10s', target: 300},
+        {duration: '5s', target: 400},
+        {duration: '10s', target: 400},
+        {duration: '2m', target: 0},
     ],
     tresholds: {
         
@@ -29,8 +29,7 @@ const base_url = 'https://localhost:5001'
 // Een getter zonder enige parameters.
 export default () =>{
     const responses = http.batch([
-        ['GET', `${base_url}/Accountcontroller/getALl`],
-        ['GET', `${base_url}/Accountcontroller/get/all`]
+        ['GET', `${base_url}/api/account/all`],
     ])
     check(responses[0], {
         'status is 200': res => res.status === 200
