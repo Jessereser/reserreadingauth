@@ -10,8 +10,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reserreadingauth.Data", "re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReserreadingAuth.Contract", "ReserreadingAuth.Contract\ReserreadingAuth.Contract.csproj", "{8D141302-56D9-4EB6-BD1B-2E1CA54D77E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reserreadingauth.Tests", "reserreadingauth.Tests\reserreadingauth.Tests.csproj", "{8D7AB161-1CE4-4965-976E-3EF9A8CBF9AA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,9 +36,5 @@ Global
 		{8D141302-56D9-4EB6-BD1B-2E1CA54D77E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D141302-56D9-4EB6-BD1B-2E1CA54D77E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D141302-56D9-4EB6-BD1B-2E1CA54D77E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D7AB161-1CE4-4965-976E-3EF9A8CBF9AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D7AB161-1CE4-4965-976E-3EF9A8CBF9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D7AB161-1CE4-4965-976E-3EF9A8CBF9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D7AB161-1CE4-4965-976E-3EF9A8CBF9AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
