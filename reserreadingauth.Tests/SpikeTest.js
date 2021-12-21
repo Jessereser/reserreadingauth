@@ -10,10 +10,10 @@ export let options = {
     noConnectionReuse: false,
     stages: [
         {duration: '20s', target: 10},
-        {duration: '5s', target: 200},
+        {duration: '5s', target: 250},
         {duration: '20s', target: 10},
-        {duration: '5s', target: 200},
-        {duration: '2m', target: 0},
+        {duration: '5s', target: 250},
+        {duration: '30s', target: 0},
     ],
     tresholds: {
         

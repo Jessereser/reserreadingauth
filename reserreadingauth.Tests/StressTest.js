@@ -17,7 +17,7 @@ export let options = {
         {duration: '10s', target: 300},
         {duration: '5s', target: 400},
         {duration: '10s', target: 400},
-        {duration: '2m', target: 0},
+        {duration: '20s', target: 0},
     ],
     tresholds: {
         
