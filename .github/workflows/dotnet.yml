@@ -34,19 +34,6 @@ jobs:
         with:
           filename: SpikeTest.js
         
-  codescan:
-    runs-on: windows-latest
-    needs: test
-    steps:
-      - uses: actions/checkout@v2
-      - uses: nuget/setup-nuget@v1.0.5
-      - uses: microsoft/setup-msbuild@v1.0.2
-      - name: Set up Projects
-        uses: security-code-scan/security-code-scan-add-action@main
-      - name: Build
-        run:
-          nuget restore
-          msbuild
     
   publish:
     runs-on: ubuntu-latest
