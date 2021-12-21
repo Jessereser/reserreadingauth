@@ -14,14 +14,14 @@ namespace reserreadingauth.Tests
     { 
         
         [Test]
-        public void Encrypt_PasswordTestPasswordEncryptAreNotEqual_True()
+        public async Task Encrypt_PasswordTestPasswordEncryptAreNotEqual_True()
         {
             //Arrange test
             string password = "TestPassword";
             AccountLogic _aLogic = new AccountLogic();
             
             //Act test
-            string result = _aLogic.Encrypt(password);
+            string result = await _aLogic.Encrypt(password);
             Console.WriteLine(result);
             
             //Assert test
@@ -29,14 +29,14 @@ namespace reserreadingauth.Tests
         }
         
         [Test]
-        public void Encrypt_PasswordTestPasswordEncryptAreEqual_True()
+        public async Task Encrypt_PasswordTestPasswordEncryptAreEqual_True()
         {
             //Arrange test
             string password = "TestPassword";
             AccountLogic _aLogic = new AccountLogic();
             
             //Act test
-            string result = _aLogic.Encrypt(password);
+            string result = await _aLogic.Encrypt(password);
             Console.WriteLine(result);
             
             //Assert test

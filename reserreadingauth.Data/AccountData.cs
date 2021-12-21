@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Google.Apis.Auth;
@@ -47,6 +48,14 @@ namespace reserreadingauth.Data
             await _context.SaveChangesAsync();
             return account;
         }
+
+        public async Task<List<Account>> SelectAll()
+        {
+            List<Account> accounts = await _context.Accounts.ToListAsync();
+            return accounts;
+        }
+        
+        
         public async Task<Account> Login(Account account)
         {
             try

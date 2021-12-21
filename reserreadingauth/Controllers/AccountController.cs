@@ -44,6 +44,7 @@ namespace reserreadingauth.Controllers
             return checkAccount;
         }
 
+        [HttpGet]
         public async Task<ActionResult<Account>> Login(string email, string password)
         {
             Account account = await _aLogic.Login(new Account()
@@ -52,6 +53,12 @@ namespace reserreadingauth.Controllers
                 Password = password,
             });
             return account;
+        }
+        
+        [HttpGet("all")]
+        public async Task<ActionResult<List<Account>>> GetAll()
+        {
+            return await _aLogic.GetAll();
         }
         
         [HttpGet("{id}")]

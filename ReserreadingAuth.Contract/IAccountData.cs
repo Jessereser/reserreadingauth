@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using reserreadingauth.common;
 
 namespace ReserreadingAuth.Contract
@@ -11,5 +12,6 @@ namespace ReserreadingAuth.Contract
         Task<Account> InsertAccount(Account account);
         Task<Account> SelectAccount(string accountId);
         Task<Account> Login(Account account);
+        Task<List<Account>> SelectAll();
     }
 }

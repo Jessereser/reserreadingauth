@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace reserreadingauth.logic
         }
         
         
-        public string Encrypt(string password)
+        public async Task<string> Encrypt(string password)
         {
             string plainData = password;
             string hashedData = ComputeSha256Hash(plainData);
@@ -50,7 +51,7 @@ namespace reserreadingauth.logic
         {
             if (account.Password == confPassword)
             {
-                account.Password = Encrypt(account.Password);
+                account.Password = await Encrypt(account.Password);
                 account.Id = Guid.NewGuid().ToString();
                 return await _aDal.InsertAccount(account);
             }
@@ -62,7 +63,7 @@ namespace reserreadingauth.logic
 
         public async Task<Account> Login(Account account)
         {
-            account.Password = Encrypt(account.Password);
+            account.Password = await Encrypt(account.Password);
             account =  await _aDal.Login(account);
             return account;
         }
@@ -70,6 +71,11 @@ namespace reserreadingauth.logic
         public async Task<Account> GetUser(string accountId)
         {
             return await _aDal.SelectAccount(accountId);
+        }
+        
+        public async Task<List<Account>> GetAll ()
+        { 
+            return await _aDal.SelectAll();;
         }
 
         public async Task<Account> GoogleAuth(string token)

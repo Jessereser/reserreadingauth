@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using reserreadingauth.common;
@@ -60,6 +61,11 @@ namespace reserreadingauth.Tests.Fakes
             {
                 return new Account();
             }
+        }
+
+        public async Task<List<Account>> SelectAll()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
