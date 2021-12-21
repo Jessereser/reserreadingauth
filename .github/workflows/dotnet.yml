@@ -19,12 +19,20 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --no-restore
-      - name: Test
+      - name: FunctionalTests
         run: dotnet test --no-build --verbosity normal
-      - name: Performance Test
+      - name: LoadTest
         uses: k6io/action@v0.1
         with:
-          filename: test.js
+          filename: LoadTest.js
+      - name: StressTest
+        uses: k6io/action@v0.1
+        with:
+          filename: StressTest.js
+      - name: Spiketest
+        uses: k6io/action@v0.1
+        with:
+          filename: SpikeTest.js
         
   codescan:
     runs-on: windows-latest
