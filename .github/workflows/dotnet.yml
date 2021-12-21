@@ -24,15 +24,15 @@ jobs:
       - name: LoadTest
         uses: k6io/action@v0.1
         with:
-          filename: loadtest.js
+          filename: LoadTest.js
       - name: StressTest
         uses: k6io/action@v0.1
         with:
-          filename: stresstest.js
+          filename: StressTest.js
       - name: Spiketest
         uses: k6io/action@v0.1
         with:
-          filename: spiketest.js
+          filename: SpikeTest.js
         
   codescan:
     runs-on: windows-latest
