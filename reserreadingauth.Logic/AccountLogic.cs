@@ -81,7 +81,7 @@ namespace reserreadingauth.logic
         public async Task<Account> GoogleAuth(string token)
         {
             Account googleAccount = await _aDal.GetGoogleAuthDataAsync(token);
-            if (googleAccount.Username != null)
+            if (googleAccount.Email != null)
             {
                 Account checkGoogleAccount = await _aDal.GoogleAuthSelectAData(googleAccount.Username, googleAccount.Email);
                 if (checkGoogleAccount.Id != null)

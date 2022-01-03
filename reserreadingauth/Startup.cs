@@ -31,6 +31,10 @@ namespace reserreadingauth
             services.AddDbContext<ReserreadingauthContext>(options =>
                 options.UseMySql(reserreadingdb, ServerVersion.AutoDetect(reserreadingdb)));
             
+            services.AddCors(c =>  
+            {  
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());  
+            });  
 
             services.AddDatabaseDeveloperPageExceptionFilter();
             
@@ -54,6 +58,8 @@ namespace reserreadingauth
             using (IServiceScope scope = app.ApplicationServices.CreateScope())
             using (var context = scope.ServiceProvider.GetService<ReserreadingauthContext>())
                 context.Database.EnsureCreated();
+            
+            app.UseCors(options => options.AllowAnyOrigin());
             
             app.UseHttpsRedirection();
 

@@ -172,3 +172,8 @@ C:\individueel_project-s3\reserreadingauth\reserreadingauth\bin\Debug\net5.0\Res
 C:\individueel_project-s3\reserreadingauth\reserreadingauth\bin\Debug\net5.0\reserreadingauth.logic.dll
 C:\individueel_project-s3\reserreadingauth\reserreadingauth\bin\Debug\net5.0\reserreadingauth.logic.pdb
 C:\individueel_project-s3\reserreadingauth\reserreadingauth\bin\Debug\net5.0\ReserreadingAuth.Contract.pdb
+C:\individueel_project-s3\reserreadingauth\reserreadingauth\bin\Debug\net5.0\System.Web.Cors.dll
+C:\individueel_project-s3\reserreadingauth\reserreadingauth\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+C:\individueel_project-s3\reserreadingauth\reserreadingauth\bin\Debug\net5.0\System.Web.Http.dll
+C:\individueel_project-s3\reserreadingauth\reserreadingauth\bin\Debug\net5.0\System.Web.Http.Cors.dll
+C:\individueel_project-s3\reserreadingauth\reserreadingauth\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

@@ -24,12 +24,11 @@ namespace reserreadingauth.Controllers
             _aLogic = new AccountLogic(new AccountData(context));
         }
         
-        [HttpPost("googleAuth")]
+        [HttpPost("googleAuth/{token}")]
         public async Task<ActionResult<Account>> GoogleAuthenticate(string token)
         {
-            Console.WriteLine("entered");
+            Console.WriteLine(token);
             Account account = await _aLogic.GoogleAuth(token);
-            
             return account;
         }
         
